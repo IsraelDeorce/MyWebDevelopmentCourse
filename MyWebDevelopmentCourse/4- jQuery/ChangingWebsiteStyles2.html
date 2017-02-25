@@ -1,0 +1,88 @@
+
+<html>
+
+    <head>
+        
+        <title>jQuery</title>	
+    
+		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>		
+	
+		<style type="text/css">
+			
+			#circle {
+				height: 150px;
+				width: 150px;
+				border-radius: 50%;
+				background-color: green;
+				margin:10px;
+			}	
+
+			.square {
+				height: 150px;
+				width: 150px;				
+				background-color: red;
+				margin:10px;
+			}
+			
+		</style>
+		
+    </head>
+
+    <body>
+		
+		<div id="circle"></div>			
+		
+		<button id="getwidth">Pegar width do body da pagina</button>
+		
+		<div class="square"></div>	
+		
+		<div class="square"></div>	
+		
+		<script type="text/javascript">
+		
+			
+			$("#circle").click(function() {		
+				//com(valor, propriedade) podemos alterar a propriedade do valor
+				//com somente(valor), ele irá retornar a propriedade presente no valor, observe o alert!
+				alert($("#circle").css("background-color"));
+				$("#circle").css("background-color", "red");
+				alert($("#circle").css("background-color"));
+			
+			});
+			
+			$("#getwidth").click(function() {
+			
+				alert($("body").css("width"));
+			
+			});
+			
+			/*
+			$("div").click(function() {
+				//O 'this' passa o element atual, ou seja, só atua no clicado
+				$(this).css("display", "none");
+			
+			});
+			*/
+			
+			$("div").click(function() {
+				//este if é porque, se clicarmos no quadrado, ele nao tem ID, e sim classe.
+				if($(this).attr("id") == "circle"){
+				
+					alert("You clicked on a " + $(this).attr("id"));
+				
+				} else {
+				
+					alert("You clicked on a " + $(this).attr("class"));
+				
+				}
+			
+			});
+			
+			
+			
+		
+		</script>
+        
+    </body>
+
+</html>

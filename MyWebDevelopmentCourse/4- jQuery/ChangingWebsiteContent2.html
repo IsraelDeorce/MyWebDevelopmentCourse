@@ -1,0 +1,51 @@
+
+<html>
+
+    <head>
+        
+        <title>jQuery</title>	
+    
+		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>		
+	
+		<style type="text/css">
+			
+			#circle {
+				height: 150px;
+				width: 150px;
+				border-radius: 50%;
+				background-color: green;
+				margin:10px;
+			}
+			
+			.square {
+				height: 150px;
+				width: 150px;
+				background-color: red;
+				margin:10px;
+			}			
+			
+		</style>
+		
+    </head>
+
+    <body>
+		
+		<div id="circle"></div>
+		
+		<iframe class="size" src="http://edition.cnn.com/"></iframe>
+		
+		<script type="text/javascript">
+		
+			//attr modifica o que esta escrito dentro das tags do HTML: mudando a SRC para outro site:
+			$("iframe").hover(function() {
+			
+				$("iframe").attr("src","http://ecowebhosting.uk/")
+			
+			});
+			
+		
+		</script>
+        
+    </body>
+
+</html>

@@ -1,0 +1,58 @@
+
+<html>
+
+    <head>
+        
+        <title>jQuery</title>	
+    
+		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>		
+	
+		<style type="text/css">
+			
+			#circle {
+				height: 150px;
+				width: 150px;
+				border-radius: 50%;
+				background-color: green;
+				margin:10px;
+			}
+			
+			.square {
+				height: 150px;
+				width: 150px;
+				background-color: red;
+				margin:10px;
+			}			
+			
+			
+		</style>
+		
+    </head>
+
+    <body>
+		
+		<div id="circle"></div>
+		
+		<p>This is some text.</p>
+		
+		<script type="text/javascript">
+	
+			$("#circle").click(function() {
+			
+				$("p").html("This text has changed!");
+			
+			});
+
+			//podemos usar o .html para alterar algo ou PEGAR o valor do html, equivale a innerHTML
+			$("p").hover(function() {
+			
+				alert($("p").html());
+			
+			});			
+			
+		
+		</script>
+        
+    </body>
+
+</html>

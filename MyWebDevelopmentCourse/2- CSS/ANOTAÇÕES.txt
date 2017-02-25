@@ -1,0 +1,23 @@
+A aplicação COLORZILA for mozzila copia a cor de qualquer coisa na web
+
+
+========================================================
+
+Se você quiser ser um designer de webpages, pode-se utilizar um programa chamado
+"CSS RESET" para resetar os formatos dos web-sites e não ter problemas com compatibilidade
+na hora de implementar o CSS
+
+========================================================
+
+procurar por códigos de safe fonts na web ajuda muito em styles
+ex: font-family:fantasy;
+Google Fonts é um bom website para fonts personalizadas.
+
+========================================================
+
+Busque pelas diferentes formas de customizar texto em CSS na web
+
+========================================================
+
+há outras pseudo-classes para se usar, visite 
+pseudo classes no google para ver uma lista

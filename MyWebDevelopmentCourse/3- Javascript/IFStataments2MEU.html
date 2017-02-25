@@ -1,0 +1,41 @@
+<html>
+
+	<head>
+	
+		<title>Javascript</title>	
+		
+	</head>
+	
+	<body>	
+	
+		<p>The magick word is: <span id="keyword">israel</span></p>
+		
+		<input type="text" id="userKey">
+		
+		<button id="sendKey">Enviar</button>
+	
+		<script type="text/javascript">				
+			
+			document.getElementById("sendKey").onclick = function() {
+			
+				var userInput = document.getElementById("userKey").value;
+				
+				var keyword = document.getElementById("keyword").innerHTML;
+				
+				if(userInput == keyword) {
+					
+					alert("Password is Correct!");
+					
+				}else {
+				
+					alert("Password is Incorrect!");
+				
+				}
+			
+			}
+		
+		</script>
+	
+	</body>
+	
+</html>

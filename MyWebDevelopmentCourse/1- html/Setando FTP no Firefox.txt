@@ -1,0 +1,10 @@
+1° - Abre o Firefox e vai em addons e instale o Fire FTP client. Restarta o Firefox
+2º - Agora ele aparece na lista de addons, adicione o FireFTP no tool bar para atalho e abra
+3º -Vá em criar uma conta e preencha de acordo com com os FTP Details que estão no site do https://ssl.extendcp.co.uk/index.cgi
+4º "Username" é o "Nome da conta" e "Login", o "Passowrd" é a "senha" e o "FTP Server IP" o Servidor, clique OK
+	obs: poderia utilizar o FTP Server ao invez do IP mas só se tivesse comprado o domínio.
+5º De Unlock em seu FTP
+6º Voltando para o FireFTP clique em Conectar
+7º agora é possivel fazer upload do seu pc para o servidor
+8º Adiciona para todos os seus arquivos do pc abrirem com notepad++, fazendo isso, é possível abrir os arquivos diretamenta
+	do servidor, que abrirão em NotePad++.

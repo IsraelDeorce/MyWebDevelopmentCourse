@@ -1,0 +1,75 @@
+
+<html>
+
+    <head>
+        
+        <title>jQuery</title>
+ 
+        <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+        
+        <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+        
+        <link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+        
+        <style type="text/css">
+        
+            #resizable {
+                
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+                
+            }
+        
+            #also {
+                
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                
+            }
+        </style>
+        
+    </head>
+
+    <body>
+        
+       <div id="draggable">Drag me horizontally!</div>
+        
+        <div style="width:400px;height:300px;background-color:yellow">
+        
+            <span>I'm stuck in the box!</span>
+        
+        </div>
+        
+        <div id="resizable">Resize com grid de 50 px de cada vez, e também da resize no outro retangulo ao mesmo tempo</div>
+        
+        <div id="also">Só Resizable</div>
+        
+        <script type="text/javascript">
+            
+           $( "#draggable" ).draggable({ axis: "x" });    
+            
+            $("span").draggable({containment: "parent"});
+            
+            $( "#resizable" ).resizable({
+                grid:50,
+                alsoResize: "#also",
+                resize: function( event, ui ) {
+                  //este : function() ativa quando o resize for feito. se for maior q 300 ele irá alertar.  
+                    if ($("#resizable").width() > 300) {
+                        
+                        alert("big enough!")
+                        
+                    }
+                    
+                }
+            });
+            
+            $("#also").resizable();
+            
+        </script>
+        
+    </body>
+
+</html>

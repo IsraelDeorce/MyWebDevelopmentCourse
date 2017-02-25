@@ -1,0 +1,63 @@
+<html>
+
+    <head>
+        
+        <title>jQuery</title>
+ 
+        <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+        
+        <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+        
+        <link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+        
+        <style type="text/css">  
+		
+		#sortable { 
+			list-style-type: none; 
+			margin: 0; 
+			padding: 0; 
+			width: 60%; 
+		}
+		
+		#sortable li {
+			margin: 0 3px 3px 3px; 
+			padding: 0.4em; 
+			padding-left: 1.5em; 
+			font-size: 1.4em; 
+			height: 18px;
+		}
+		
+		#sortable li span { 
+			position: absolute;
+			margin-left: -1.3em; 
+		}
+
+        </style>
+        
+    </head>
+
+    <body> 
+
+		<ul id="sortable">
+			<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>LISTA UM</li>
+			<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>LISTA DOIS</li>
+			<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>LISTA TRES</li>
+			<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>QUATRO LISTA</li>
+			<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>CINCO LISTA</li>
+			<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>SEIS LISTA</li>
+			<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>CREDO TA MARROM</li>			
+		</ul>
+
+        
+        <script type="text/javascript">	
+		
+			$( function() {
+				$( "#sortable" ).sortable();
+				//$( "#sortable" ).disableSelection();
+			});
+            
+        </script>
+        
+    </body>
+
+</html>

@@ -1,0 +1,49 @@
+<html>
+
+	<head>
+	
+		<title>Javascript</title>	
+		
+	</head>
+	
+	<body>	
+	
+		<script type="text/javascript">				
+			
+			var myArray = new Array();
+			
+			myArray[0] = "pizza";
+			
+			myArray[1] = "chocolate";
+			
+			//escrevendo essa linha de código, é possível reconher informações do array atravéz do inspect/console da página
+			//console.log(myArray);	
+			
+			//outra forma de criar um array:
+			var tweets = ["Morning everybody", "I love coffee!"];
+			
+			//inclui valor no array
+			tweets.push("Back to work!");
+			
+			//detelando valor. o primeiro número é a posição no array, o segundo a quantidade de valores
+			//na linha a seguir quero deletar a posição 1, 1 valor. ou seja, sai o I love coffee
+			//tweets.splice(1, 1);
+			
+			//deleta do valor 1 ao 2
+			//tweets.splice(1, 2);
+			
+			//também podemos usar splica para adicionar:
+			//quero adicionar antes do numero "1", não quero deletar nenhum valor "0", conteúdo "Cornflakes for breakfast!");
+			//tweets.splice(1, 0, "cornflakes for breakfast!");
+			
+			//este comando troca o valor "I love coffee!" que está na posição 1 por "cornflakes for breakfast!" e um "num num":
+			tweets.splice(1,1,"cornflakes for breakfast!", "num num");
+			
+			//alert(tweets[1]);
+			
+			console.log(tweets);
+		</script>
+	
+	</body>
+	
+</html>

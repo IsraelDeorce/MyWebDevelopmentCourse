@@ -1,0 +1,44 @@
+body {
+	padding:0;
+	margin:0;
+	font-family: system, "Helvetica Neue", Helvetica, Arial;
+}
+
+#topbar {					
+	height: 35px;
+	background-color: #eeeeee;
+	width:100%;
+	border-bottom: 1px #bfbfbf solid;
+}
+
+#menubar {	
+	width:280px;
+	margin:0 auto;
+	height: 35px;
+	
+}
+
+.topbar-section {
+	padding: 0 10px;	
+	text-align:center;
+	float:left;
+	border-left: 1px #bfbfbf solid;
+	border-right: 1px #bfbfbf solid;
+	height:100%;
+}
+
+.org {
+	float:left;	
+	margin: 6px 0 0 0;
+	font-size: 13px;	
+}
+
+.widget:hover {
+	background-color: #bfbfbf;
+}
+
+#logo {
+	width: 25px;
+	float:left;	
+	margin: 3px;
+}

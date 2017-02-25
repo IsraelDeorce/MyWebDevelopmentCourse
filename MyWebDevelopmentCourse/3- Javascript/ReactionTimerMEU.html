@@ -1,0 +1,80 @@
+
+<html>
+
+    <head>
+        
+        <title>Reaction Timer</title>	
+    
+    </head>
+
+    <body>   
+	
+		<h1>Test Your Reactions!</h2>
+		
+		<p>Click on the boxes and circles as quicly as you can!</p>
+		
+		<p><strong>Your time: <span id="timer"></span></strong></p>		
+		
+		<div id="object"></div>				
+        
+        <script type="text/javascript">						
+			
+			var colors = new Array();
+			colors[0] = "Yellow";		colors[1] = "Wheat";	colors[2] = "Violet";	colors[3] = "Turquoise";	colors[4] = "Blue";
+			colors[5] = "Red";			colors[6] = "Brown";	colors[7] = "Purple";	colors[8] = "Pink";			colors[9] = "Orange";
+			colors[10] = "OrangeRed";	colors[11] = "Green";	colors[12] = "Black";	colors[13] = "Grey";		colors[14] = "Lime";						
+			
+			function generateColor(){
+				var posArray = Math.floor(Math.random() * 15);
+				return (colors[posArray]);
+			}
+			
+			function generateNumber(){
+				var pixel = Math.floor((Math.random() * 380) + 20);
+				return pixel;
+			}
+			
+			var start_time = new Date();			
+			
+			showObject();
+			
+			function showObject() {		
+			
+				var square_circle = (Math.floor(Math.random() * 2));				
+			
+				if(square_circle==0){
+					var size = generateNumber()+"px";
+					document.getElementById("object").style.backgroundColor = generateColor();
+					document.getElementById("object").style.width = size;
+					document.getElementById("object").style.height = size;				
+					document.getElementById("object").style.position= "relative";				
+					document.getElementById("object").style.top = generateNumber();	
+					document.getElementById("object").style.left = generateNumber();	
+					document.getElementById("object").style.borderRadius = "0";					
+				
+				} else {			
+					var size = generateNumber()+"px";
+					document.getElementById("object").style.backgroundColor = generateColor();
+					document.getElementById("object").style.width = size;
+					document.getElementById("object").style.height = size;	
+					document.getElementById("object").style.position= "relative";	
+					document.getElementById("object").style.top = generateNumber();	
+					document.getElementById("object").style.left = generateNumber();					
+					document.getElementById("object").style.borderRadius = "50%";				
+				}			
+			}
+			
+			document.getElementById("object").onclick = function end() {
+				var now = new Date();
+				var sec = ((now-start_time)/1000);
+				document.getElementById("timer").innerHTML = sec+"s";
+				start_time = new Date();
+				showObject();
+			}
+			
+			
+        </script>
+        
+    </body>
+
+</html>

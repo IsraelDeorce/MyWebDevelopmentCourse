@@ -1,0 +1,44 @@
+
+<html>
+
+    <head>
+        
+        <title>jQuery</title>	
+    
+		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>		
+	
+		<style type="text/css">
+			
+			#circle {
+				height: 150px;
+				width: 150px;
+				border-radius: 50%;
+				background-color: green;
+				margin:10px;
+			}			
+			
+		</style>
+		
+    </head>
+
+    <body>
+		
+		<div id="circle"></div>		
+		
+		<script type="text/javascript">
+		
+			
+			$("#circle").click(function() {		
+				//com(valor, propriedade) podemos alterar a propriedade do valor
+				//com somente(valor), ele irá retornar a propriedade presente no valor, observe o alert!
+				alert($("#circle").css("background-color"));
+				$("#circle").css("background-color", "red");
+				alert($("#circle").css("background-color"));
+			
+			});
+		
+		</script>
+        
+    </body>
+
+</html>

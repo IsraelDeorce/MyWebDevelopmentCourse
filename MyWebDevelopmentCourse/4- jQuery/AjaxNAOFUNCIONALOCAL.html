@@ -1,0 +1,50 @@
+
+<html>
+
+    <head>
+        
+        <title>AJAX</title>	
+    
+		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>		
+		
+    </head>
+
+    <body>
+		
+		<p>AJAX não funciona localmente, só funciona hosteado na web porque é uma ferramente nova
+			implementada pelo Google. É muito útil pois permite ações serem feitas em tempo real
+			sem necessitar que a página recarregue!</p>	
+                <p id="paradata"></p>
+
+				
+		
+		<script type="text/javascript">	
+		/*Esta forma não garante que a página carregue bem no caso de interrupção do usuário,
+		  por exemplo, se estiverem usando celular e a conexão cair, ao invés disso, use 
+		  o comando do .AJAX
+		  
+			$.get("info.txt", function(data) {
+			
+				alert(data);
+			
+			});
+			*/
+			
+			$.ajax("info.txt")
+				.done(function(data) {
+			
+				$("#paradata").html(data);
+			
+				})
+				.fail(function() {
+			
+				alert("could not get data");
+			
+				});
+		
+		
+		</script>
+        
+    </body>
+
+</html>

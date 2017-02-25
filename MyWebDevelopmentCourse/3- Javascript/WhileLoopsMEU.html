@@ -1,0 +1,60 @@
+<html>
+
+	<head>
+	
+		<title>Javascript</title>	
+		
+	</head>
+	
+	<body>	
+		
+		<p>How many fingers should we hold? (0 to 10)</p>
+		
+		<p>
+			<select id="userAnswer">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>					
+			</select>
+			
+			<button id="guess">Let the computer find the answer!</button>			
+		</p>
+		
+		<script type="text/javascript">	
+
+			document.getElementById("guess").onclick = function() {
+			
+				var e = document.getElementById("userAnswer");
+				var guess = e.options[e.selectedIndex].value;
+				
+				if(guess <= 10 && guess >= 0){
+				
+					var computerGuess;
+					var numberGuesses = 0;
+				
+					while(computerGuess!=guess){
+						computerGuess = Math.floor((Math.random() * 11));
+						numberGuesses = numberGuesses + 1;
+					}
+					
+					alert("O computador achou a resposta: #"+computerGuess+"#"+"Foram necessárias: "+numberGuesses+"tentativas");
+				}else {
+				
+					alert("Número incorreto, inclua um número de 0 a 10!");
+				
+				}
+				
+			}
+		</script>
+		
+	</body>
+	
+</html>

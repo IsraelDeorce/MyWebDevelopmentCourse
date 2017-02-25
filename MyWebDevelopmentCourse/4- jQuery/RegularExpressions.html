@@ -1,0 +1,36 @@
+
+<html>
+
+    <head>
+        
+        <title>AJAX</title>	
+    
+		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>		
+		
+    </head>
+
+    <body>
+	
+		<script type="text/javascript">	
+		
+			/*	a variavel =regex= recebe o "is"
+				a variavel =string= recebe uma "frase"
+				a variavel =result= pergunta se existe algum is dentro da frase e retorna null se não existe, ou "is" se existe
+				
+				se colocarmos um /i depois dos "/x/" ele rotorna assim:  /x/i ele ignora minúsculas ou maiúsculas
+				se colocarmos um /g depois dos "/x/" ele rotorna um array de quantas vezes "x" estava presente na frase]
+			*/			
+		
+			var regex = /is/i;
+			
+			var string  "regex is great!";
+
+			var result = string.match(regex);
+			
+			alert(result);
+		
+		</script>
+        
+    </body>
+
+</html>

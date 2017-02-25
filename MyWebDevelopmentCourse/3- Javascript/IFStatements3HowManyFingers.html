@@ -1,0 +1,43 @@
+<html>
+
+	<head>
+	
+		<title>Javascript</title>	
+		
+	</head>
+	
+	<body>		
+	
+		<p>How many fingers am I holding up?</p>
+		
+		<input id="userAnswer" type="text">
+		
+		<button id="guess">Guess!</button>
+		
+		<script type="text/javascript">	
+			
+			document.getElementById("guess").onclick = function () {
+			
+				//eu poderia remover o +1 da linha de código e substituir o 5 por 6 para gerar números de 0 a 5. Abaixo, está gerando de 1 a 5.
+				var answer = Math.floor((Math.random() * 5) + 1);
+			
+				var userAnswer = document.getElementById("userAnswer").value;
+				
+				if(userAnswer == answer) {
+				
+					alert("You got it! The answer was: " + answer);
+				
+				} else {
+				
+					alert("Wrong! The answer was: " + answer);
+				
+				}
+				
+			
+			}
+		
+		</script>
+	
+	</body>
+	
+</html>

@@ -1,0 +1,64 @@
+
+<html>
+
+    <head>
+        
+        <title>jQuery</title>	
+    
+		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>		
+	
+		<style type="text/css">
+			
+			#circle {
+				height: 150px;
+				width: 150px;
+				border-radius: 50%;
+				background-color: green;
+				margin:10px;
+			}	
+
+			.square {
+				height: 150px;
+				width: 150px;				
+				background-color: red;
+				margin:10px;
+			}
+			
+			#hiddenText {			
+				display: none;				
+			}
+			
+		</style>
+		
+    </head>
+
+    <body>
+		
+		<p id="text">This is some text!</p>
+			
+		<button id="fadeOut">Fade it!</button>
+		
+		<p id="hiddenText">This text will be hidden initially.</p>
+		
+		<button id="fadeIn">Fade it!</button>
+		
+		<script type="text/javascript">		
+
+			$("#fadeOut").click(function() {
+			
+				$("#text").fadeOut();
+			
+			});
+			
+			$("#fadeIn").click(function() {
+			
+				$("#hiddenText").fadeIn();
+			
+			});
+		
+		
+		</script>
+        
+    </body>
+
+</html>
